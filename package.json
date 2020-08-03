@@ -1,6 +1,6 @@
 {
 	"name": "tersh-boilerplate",
-	"version": "0.5.0",
+	"version": "0.5.1",
 	"author": "Yiğit Levent",
 	"description": "Typescript, Electron, React, SCSS, Hot-Reloading",
 	"homepage": ".",

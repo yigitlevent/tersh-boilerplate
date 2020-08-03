@@ -6,8 +6,8 @@ import App from "./App";
 
 import * as serviceWorker from "./serviceWorker";
 
-// TODO: Comment
-// TEST/REMOVE: Getting data from main thread
+// Example ipcRenderer/ipcMain use. 
+// This is very similar to standard electron, with only big difference of how you import the module. 
 const electron = window.require("electron");
 electron.ipcRenderer.on("test:bar", (e: any, m: any) => { console.log(m); });
 

@@ -2,21 +2,19 @@ import { app, BrowserWindow } from "electron";
 
 var mainWindow: BrowserWindow | null = null;
 
-// TODO: Comment
 app.on("ready", () => {
 	mainWindow = createWindow(1280, 720, false);
 
-	// TODO: Comment
+	// Check if the application is packaged.
 	if (!app.isPackaged) {
-		// TODO: Comment
+		// Only enable hot reloading on the main thread if the application is not packaged.
 		try { require("electron-reloader")(module, { "watchRenderer": false }); } catch (_) { }
 
-		// TODO: Comment
+		// You may delete this to stop the app from opening the Dev Tools.
 		mainWindow.webContents.openDevTools();
 	}
 });
 
-// TODO: Comment
 function createWindow(w: number, h: number, fs: boolean): BrowserWindow {
 	let mw = new BrowserWindow({
 		width: w,
@@ -30,20 +28,17 @@ function createWindow(w: number, h: number, fs: boolean): BrowserWindow {
 		}
 	});
 
-	// TODO: Comment
+	// How you load the react app depends on if you have a package or not.
 	mw.loadURL((!app.isPackaged) ? "http://localhost:3000/index.html" : `file://${__dirname}/../index.html`);
 
-	// TODO: Comment
 	mw.on("closed", () => {
 		app.quit();
 	});
 
-	// TODO: Comment
 	mw.once("ready-to-show", () => {
 		mw.show();
 
-		// TODO: Comment
-		// TEST/REMOVE: Sending data to ipcRenderer
+		// Example ipcRenderer/ipcMain use. 
 		mw.webContents.send("test:bar", "bar");
 	});
 

@@ -1,18 +1,17 @@
 # tersh-boilerplate
 
-> Just another `React` and `Electron` boilerplate that works with `Typescript` and `SCSS`.
+> Just another `react` and `electron` boilerplate that works with `typescript` and `scss`.
 
--   Hot reloading support for `Electron` and `React`
--   `electron-builder` support
--   Very small, except the inevitible number of node modules... derp
--   Includes basic support for `SCSS`
+-   Hot reloading support for `electron` and `react`
+-   Executables can be built via `electron-builder`
+-   Support for `scss` on renderer
 -   Decoupled `react` and `electron`
 
 ## Scripts
 
 ### `npm run dev`
 
-Runs the project in developer mode.
+Runs the project in developer mode with hot reloading for both `react` and `electron`.
 
 ### `npm run dev-nomainreload`
 
@@ -26,15 +25,15 @@ Builds electron to the `dist` folder.
 
 ### Is there anything else I should know?
 
-Besides this README, comments that have been placed into the important bits in `electron/main.ts` and `src/index.tsx` are all you need, besides basic knowledge on `electron` and `react`.
+If you are familiar with `react` and `electron`, this document is all you need to start using this boilerplate. Also, some relevant comments that have been placed into `electron/main.ts` and `src/index.tsx` to explain some pitfalls.
 
 ### Can I use `ipcMain` and `ipcRenderer`?
 
-Yes; the `src` directory is the renderer thread, and the `electron` directory is the main thread. An example may be seen at `electron/main.ts:40` and `src/index.tsx:10`.
+Yes. The `src` directory is the renderer thread, and the `electron` directory is the main thread. An example may be seen at `electron/main.ts:40` and `src/index.tsx:11-12`.
 
 ### Can I use `ipcRenderer` or other electron renderer components inside a `react` class/component?
 
-Yes, use [this](https://github.com/electron/electron/issues/9920) solution.
+Yes. Use [this](https://github.com/electron/electron/issues/9920) solution.
 
 ### Why no `React Developer Tools` extension?
 
@@ -58,9 +57,7 @@ While these haven't been used directly, this boilerplate is heavily inspired by:
 -   [electron-typescript-react](https://github.com/diego3g/electron-typescript-react)
 -   [electron-with-create-react-app](https://github.com/csepulv/electron-with-create-react-app)
 
-## What the hell is `tersh`?
-
-I'm very clever at naming things, you see.
+## What is `tersh`?
 
 ```
 t - typescript
