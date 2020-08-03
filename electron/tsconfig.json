@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"target": "es2019",
+		"module": "commonjs",
+		"outDir": "../build",
+		"rootDir": "../",
+		"alwaysStrict": true,
+		"removeComments": true,
+		"noEmitOnError": true,
+		"sourceMap": true,
+		"strict": true,
+		"strictNullChecks": true,
+		"typeRoots": [
+			"node_modules/@types"
+		]
+	}
+}
